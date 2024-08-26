@@ -7,5 +7,6 @@ class DrinksCategory(models.Model):
     
 class Drinks(models.Model):
     drink = models.CharField(max_length=200)
-    prince = models.IntegerField()
+    price = models.IntegerField()
+    category_id = models.ForeignKey(DrinksCategory, on_delete=models.PROTECT, default=None)
     
